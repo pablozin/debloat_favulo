@@ -38,7 +38,7 @@ foreach ($line in $lines) {
     }
 
     $currentState = $cim.StartMode.ToLower()
-
+    # verify if the process is alredy in the desired state
     if ($currentState -eq $serviceState) {
         Write-Output "Processing: $serviceName -> already $serviceState"
         continue
